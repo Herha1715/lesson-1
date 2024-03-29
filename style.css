@@ -1,3 +1,12 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before *::after {
+    box-sizing: initial;
+}
+
 a {
     text-decoration: none;
     color: inherit;
@@ -16,6 +25,15 @@ body {
     line-height: 1.2;
 }
 
+.title {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 50px;
+    margin-top: 0;
+
+
+}
+
 .F {
     font-family: "Balsamiq Sans", sans-serif;
     font-family: "Kaisei Decol", serif;
@@ -23,7 +41,7 @@ body {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1220px;
     margin: 0 auto;
     padding: 0 10px;
 }
@@ -41,6 +59,7 @@ body {
     background-repeat: no-repeat;
     background-position: top center;
     background-size: contain;
+    margin-bottom: 150px;
 }
 
 .heder-top {
@@ -75,7 +94,8 @@ body {
 .header-content__text {
     max-width: 510px;
 }
-.header-content__text span{
+
+.header-content__text span {
     color: #CC2E2E;
 }
 
@@ -92,10 +112,450 @@ body {
     display: inline-block;
     margin-top: 50px;
     font-size: 20px;
-    
+
 }
-.header__text{
+
+.header__text {
     font-size: 24px;
     text-align: center;
     padding-bottom: 25px 0;
+}
+
+.main {
+    margin-bottom: 150px;
+}
+
+.about {
+    margin-bottom: 150px;
+}
+
+.about__inner {
+    display: flex;
+    gap: 0 22px;
+    align-items: center;
+}
+
+.about__text {
+    padding-bottom: 30px;
+    max-width: 500px;
+
+}
+
+.about__text span {
+    font-family: "Balsamiq Sans", sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+}
+
+.about__inner-title {
+    font-style: 28px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.about__inner-list {
+    display: flex;
+    gap: 0 30px;
+    text-align: center;
+    color: #BB8A52;
+
+}
+
+.about__inner-list dt {
+    font-weight: 600;
+    font-size: 48px;
+    margin-bottom: 5px;
+}
+
+.about__inner-list dd {
+    margin-inline-start: 0px
+}
+
+.why {
+    margin-bottom: 150px;
+}
+
+.why__text {
+    max-width: 580px;
+    font-weight: 600px;
+    font-size: 28px;
+    margin-bottom: 40px;
+
+
+}
+
+.why__inner {
+    display: flex;
+    gap: 0 22px;
+    align-items: center;
+
+}
+
+.why__inner-list {
+    font-weight: 600px;
+    font-size: 28px;
+}
+
+.why__inner-item+.why__inner-item {
+    padding-top: 55px;
+}
+
+/* Редагування лішки */
+
+.why__inner-list {
+    list-style-type: none;
+    counter-reset: my-counter;
+    padding-left: 10px;
+
+}
+
+.why__inner-item::before {
+    content: counter(my-counter);
+    counter-increment: my-counter;
+    padding-right: 5px;
+}
+
+.why__inner-item.pl--60 {
+    padding-left: 60px;
+}
+
+.why__inner-item.pl--90 {
+    padding-left: 90px;
+}
+
+.projects {
+    margin-bottom: 110px;
+}
+
+.project__text {
+    margin-bottom: 30px;
+    max-width: 595px;
+    font-weight: 600px;
+    font-size: 28px;
+}
+
+.project__gallery {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.project__gallery-text {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.gallery--item {
+    grid-area: span 2;
+}
+
+.services {
+    margin-bottom: 110px;
+    padding: 20px 0 40px;
+    background-color: rgba(109, 151, 115, 0.1);
+
+}
+
+.services__text {
+    max-width: 590px;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+.services__list {
+    padding: 0 25px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.service__item-text {
+    padding-top: 20px;
+    font-size: 24px;
+}
+
+.prices {
+    margin-bottom: 150px;
+}
+
+.prices__text {
+    max-width: 730px;
+    font-weight: 600;
+    font-size: 28px;
+    margin-bottom: 50px;
+}
+
+.prices__box {
+    display: flex;
+    gap: 22px;
+    /* justify-content: space-between; */
+}
+
+.prices__list {
+    border: 2px solid #FFBA00;
+    padding: 60px 55px 88px;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.prices__item-first {
+    font-size: 36px;
+    font-weight: 600;
+    padding-bottom: 40px;
+}
+
+.prices__item {
+    font-size: 24px;
+    font-weight: 600;
+    max-width: 445;
+    text-align: left;
+    margin-bottom: 10px;
+    list-style-type: disc;
+}
+
+.prices__item-sum {
+    font-weight: 700;
+    font-size: 36px;
+    margin-top: auto;
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 94px;
+}
+
+prices__item-sum sup {
+    padding-bottom: 20px;
+    font-size: 15px;
+}
+
+.prices__item--btn {
+    font-size: 20px;
+    display: block;
+    background-color: #FFBA00;
+    padding: 20px;
+}
+
+.work {
+    margin-bottom: 150px;
+}
+
+.work__list {
+    list-style-type: none;
+    counter-reset: my-counter;
+    display: flex;
+    max-width: 1082px;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0 15px;
+
+}
+
+.work__item {
+    font-size: 28px;
+    font-weight: 600;
+    position: relative;
+    line-height: 185px;
+    padding-left: 64px;
+
+}
+
+.work__item::before {
+    content: counter(my-counter, decimal-leading-zero);
+    counter-increment: my-counter;
+    font-size: 128px;
+    font-family: "Kaisei Decol", serif;
+    color: rgba(109, 151, 115, 0.2);
+    font-weight: 400;
+    letter-spacing: -12px;
+    -webkit-text-stroke: 1px #20302e;
+    position: absolute;
+    left: 0;
+}
+
+.team {
+    margin-bottom: 150px;
+}
+
+.team__text {
+    font-weight: 600;
+    font-size: 28px;
+    margin-bottom: 50px;
+
+}
+
+.team__list {
+    display: flex;
+    gap: 0 50px;
+    justify-content: center;
+
+}
+
+.team__item {
+    width: 200px;
+}
+
+.team__item-name {
+    padding: 10px 0 15px;
+    text-align: center;
+}
+
+.team__item-descr {
+    text-align: center;
+}
+
+.questions {
+    margin-bottom: 110px;
+}
+
+.accordeon {
+    column-count: 2;
+    gap: 0 22px;
+}
+
+.accordeon__item {
+    margin-bottom: 40px;
+}
+
+.accordeon__title {
+    margin-bottom: 40px;
+    font-size: 24px;
+    background-color: transparent;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    padding-right: 70px;
+    position: relative;
+    width: 100%;
+}
+
+.accordeon__title::before {
+    content: "";
+    position: absolute;
+    background-image: url(../website/image/arrow-down.svg);
+    width: 16px;
+    height: 26px;
+    top: 0;
+    right: 40px;
+
+
+}
+
+.accordeon__descr {
+    display: none;
+}
+
+.contact-form {
+    margin-bottom: 150px;
+}
+
+.contact-form__inner {
+    display: grid;
+    grid: 22px;
+    grid-template-columns: repeat(2, 1fr);
+
+}
+
+.contact-form__text {
+    font-weight: 600;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.form__text {
+    margin-bottom: 15px;
+
+}
+
+.form__input {
+    max-width: 520px;
+    width: 100%;
+    display: inline-block;
+    border: none;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #0C3E2E;
+    background-color: transparent;
+    padding: 5px 10px;
+    margin-left: 28px;
+    font-size: 24px;
+    font-weight: 500;
+    color: #0C3E2E;
+    font-family: "Inter", sans-serif;
+    line-height: 1.2;
+}
+
+.form__input::placeholder {
+    color: #d9d9d9;
+    font-size: 24px;
+    font-weight: 500;
+    font-family: "Inter", sans-serif;
+    line-height: 1.2;
+
+}
+
+.form__btn {
+    font-size: 20px;
+    font-family: "Inter", sans-serif;
+    line-height: 1.2;
+    background-color: #FFBA00;
+    display: inline-block;
+    border: none;
+    padding: 20px 42px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+.form__link {
+    display: flex;
+    align-items: center;
+}
+
+.form__link span {
+    border-bottom: 1px solid #0C3E2E;
+}
+
+.form__link img {
+    margin-left: 31px;
+}
+
+.contact-form__images {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+
+}
+
+.contact-form__images-mod {
+    grid-column: 1/-1;
+}
+.contacts{
+    margin-bottom: 150px;
+}
+.contacts__inner{
+    display: flex;
+    gap: 0 22px;
+}
+.contacts__text{
+    font-weight: 600;
+    font-size: 28px;
+    margin-bottom: 70px;
+    margin-top: 0;
+}
+.contacts__info{
+    font-size: 24px;
+        
+}
+.contacts__info dt{
+ margin-top: 20px;
+
+}
+.contacts__info dd{
+    margin-inline-start: 0px
 }
