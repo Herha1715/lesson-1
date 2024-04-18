@@ -12,6 +12,7 @@
         href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@100..900&family=Kaisei+Decol&family=Manrope:wght@200..800&display=swap"
         rel="stylesheet">
     <!-- <link rel="stylesheet" href="css/reset.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -24,12 +25,19 @@
                         <img src="image/logo.svg" alt="логотип зелена палітра" class="logo__img">
                     </a>
                     <nav class="menu">
-                        <ul class="menu__list">
-                            <li class="menu__item"><a href="#" class="menu__link">Про нас</a></li>
-                            <li class="menu__item"><a href="#" class="menu__link">Проекти</a></li>
-                            <li class="menu__item"><a href="#" class="menu__link">Послуги</a></li>
-                            <li class="menu__item"><a href="#" class="menu__link">Ціни</a></li>
-                            <li class="menu__item"><a href="#" class="menu__link">Контакти</a></li>
+                        <button class="menu__btn">
+                            <svg width="50" height="32" viewBox="0 0 50 32" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1.66666 1H48.3333M1.66666 16H48.3333M1.66666 31H48.3333" stroke="#0C3E2E"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <ul class="menu__list ">
+                            <li class="menu__item"><a href="#about section__mb" class="menu__link">Про нас</a></li>
+                            <li class="menu__item"><a href="#projects section__ms" class="menu__link">Проекти</a></li>
+                            <li class="menu__item"><a href="#services section__ms" class="menu__link">Послуги</a></li>
+                            <li class="menu__item"><a href="#prices section__mb" class="menu__link">Ціни</a></li>
+                            <li class="menu__item"><a href="#contacts section__mb" class="menu__link">Контакти</a></li>
                         </ul>
                     </nav>
                     <a class="phone" href="tel:+380938422049">тел. +380 938 422 049</a>
@@ -43,13 +51,18 @@
                             <h1 class="header__title">
                                 Реалізуйте Ваші зелені мрії з нами
                             </h1>
-                            <p class="header-content__text">
+                            <p class="header-content__text header-content__text-mob">
                                 Почніть ваше ландшафтне втілення з нами та отримайте перший рік обслуговування
                                 абсолютно <span>безкоштовно!</span>
                             </p>
-                            <a class="header-content__btn" href="#">Замовити проект</a>
+                            <a class="header-content__btn header-content__btn--mob" href="#">Замовити проект</a>
                         </div>
                         <img src="image/header-top.png" alt="" class="header-content__img">
+                        <p class="header-content__text header-content__text-desc">
+                            Отримайте перший рік обслуговування
+                            абсолютно <span>безкоштовно!</span>
+                        </p>
+                        <a class="header-content__btn header-content__btn--desc" href="#">Замовити проект</a>
                     </div>
                 </div>
                 <p class="header__text">
@@ -59,12 +72,13 @@
             </div>
         </div>
     </header>
+
     <main class="main">
-        <section class="about">
+        <section class="about section__mb" id="about section__mb">
             <div class="container">
                 <h2 class="title">Про нас</h2>
-                <div class="about__inner">
-                    <img src="image/about-img.png" alt="">
+                <div class="about__inner" id="">
+                    <img class="about__inner-img" src="image/about-img.png" alt="">
                     <div class="about__inner-box">
 
                         <p class="about__text"> <span>Зелена Палітра</span> прагне досягти гармонії між природою та
@@ -93,7 +107,7 @@
                 </div>
             </div>
         </section>
-        <section class="why">
+        <section class="why section__mb" id="why section__mb">
             <div class="container">
                 <h2 class="title">Чому ми?</h2>
                 <p class="why__text">Ви обираєте якість, креативність та натхнення для вашого саду.</p>
@@ -110,7 +124,7 @@
                 </div>
             </div>
         </section>
-        <section class="projects">
+        <section class="projects section__ms" id="projects section__ms">
             <div class="container">
                 <h2 class="title">Наші проекти</h2>
                 <p class="project__text">Ми гарантуємо, що ваші очі будуть радіти кожен раз, коли ви будете
@@ -140,7 +154,7 @@
                 </div>
             </div>
         </section>
-        <section class="services">
+        <section class="services section__ms" id="services section__ms">
             <div class="container">
 
                 <h2 class="title">Послуги</h2>
@@ -166,7 +180,7 @@
                 </ul>
             </div>
         </section>
-        <section class="prices">
+        <section class="prices section__mb" id="prices section__mb">
             <div class="container">
                 <h2 class="title">Тарифи і ціни</h2>
                 <p class="prices__text">Команда зеленого дизайну може розглянути бажання клієнта та створити
@@ -200,7 +214,7 @@
                 </div>
             </div>
         </section>
-        <section class="work">
+        <section class="work section__mb">
             <div class="container">
                 <h2 class="title">Як ми працюємо</h2>
                 <ol class="work__list">
@@ -212,120 +226,212 @@
                 </ol>
             </div>
         </section>
-        <section class="team">
+        <section class="team section__mb">
             <div class="container">
                 <h2 class="title">Наша команда</h2>
                 <p class="team__text">Ландшафтний дизайн — це мистецтво створення краси, а Зелена палітра — це
                     художники, які знають секрети кожного відтінку природи. </p>
                 <div class="team__list">
-                    <div class="team__item">
+
+                    <div class="swiper-slide team__item">
                         <img src="image/team-1.png" alt="">
                         <div class="team__item-name">Юлія, керівник</div>
                         <div class="team__item-descr">Віддана природі та красі кожен день.</div>
                     </div>
-                    <div class="team__item">
+                    <div class="swiper-slide team__item">
                         <img src="image/team-2.png" alt="">
                         <div class="team__item-name">Максим, менеджер</div>
                         <div class="team__item-descr">Садовий магік, що перетворює мрії у зелені оази.</div>
                     </div>
-                    <div class="team__item">
+                    <div class="swiper-slide team__item">
                         <img src="image/team-3.png" alt="">
                         <div class="team__item-name">Ксенія, дизайнер</div>
                         <div class="team__item-descr">Люблю грішні рослини та відшукую їм ідеальний будинок.</div>
                     </div>
-                    <div class="team__item">
+                    <div class="swiper-slide team__item">
                         <img src="image/team-4.png" alt="">
                         <div class="team__item-name">Олег, проектант</div>
-                        <div class="team__item-descr">Садовий ентузіаст, який вірить у силу зеленого лікування.</div>
+                        <div class="team__item-descr">Садовий ентузіаст, який вірить у силу зеленого лікування.
+                        </div>
                     </div>
                 </div>
+
+
             </div>
         </section>
-        <section class="questions">
+        <section class="questions section__ms">
             <div class="container">
                 <h2 class="title">Часті питання</h2>
                 <div class="questions__accordeon accordeon">
                     <div class="accordeon__item">
-                        <button class="accordeon__title">Скільки часу зазвичай потрібно для виконання проекту?</button>
-                        <p class="accordeon__descr">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor magni non temporibus qui
-                            voluptas, doloribus iure necessitatibus, sit, minima distinctio recusandae sequi esse enim.
-                            Eaque harum non eos sed temporibus.
-                        </p>
-                        <div class="accordeon__item">
-                            <button class="accordeon__title">Як часто потрібно обслуговувати новий ландшафт?</button>
+                        <button class="accordeon__title">Скільки часу зазвичай потрібно для виконання
+                            проекту?</button>
+                        <div class="panel">
                             <p class="accordeon__descr">
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor magni non temporibus qui
-                                voluptas, doloribus iure necessitatibus, sit, minima distinctio recusandae sequi esse
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor magni non temporibus
+                                qui
+                                voluptas, doloribus iure necessitatibus, sit, minima distinctio recusandae sequi
+                                esse enim.
+                                Eaque harum non eos sed temporibus.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="accordeon__item">
+                        <button class="accordeon__title">Як часто потрібно обслуговувати новий
+                            ландшафт?</button>
+                        <div class="panel">
+                            <p class="accordeon__descr">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor magni non
+                                temporibus qui
+                                voluptas, doloribus iure necessitatibus, sit, minima distinctio recusandae sequi
+                                esse
                                 enim. Eaque harum non eos sed temporibus.
                             </p>
-                            <div class="accordeon__item">
-                                <button class="accordeon__title">Які методи оплати приймаємо?</button>
-                                <p class="accordeon__descr">
-                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor magni non temporibus
-                                    qui voluptas, doloribus iure necessitatibus, sit, minima distinctio recusandae sequi
-                                    esse enim. Eaque harum non eos sed temporibus.
-                                </p>
-                                <div class="accordeon__item">
-                                    <button class="accordeon__title">Як довго надаємо послуги післяпродажного
-                                        догляду?</button>
-                                    <p class="accordeon__descr">
-                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor magni non
-                                        temporibus qui voluptas, doloribus iure necessitatibus, sit, minima distinctio
-                                        recusandae sequi esse enim. Eaque harum non eos sed temporibus.
-                                    </p>
-                                    <div class="accordeon__item">
-                                        <button class="accordeon__title">Чи можливе розбірка старого ландшафту перед
-                                            початком нового проекту?</button>
-                                        <p class="accordeon__descr">
-                                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor magni non
-                                            temporibus qui voluptas, doloribus iure necessitatibus, sit, minima
-                                            distinctio recusandae sequi esse enim. Eaque harum non eos sed temporibus.
-                                        </p>
-                                        <div class="accordeon__item">
-                                            <button class="accordeon__title">Чи надаєте консультації та розробку дизайну
-                                                онлайн?</button>
-                                            <p class="accordeon__descr">
-                                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor magni
-                                                non temporibus qui voluptas, doloribus iure necessitatibus, sit, minima
-                                                distinctio recusandae sequi esse enim. Eaque harum non eos sed
-                                                temporibus.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
+                        </div>
+                    </div>
+
+                    <div class="accordeon__item">
+                        <button class="accordeon__title">Які методи оплати приймаємо?</button>
+                        <div class="panel">
+                            <p class="accordeon__descr">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor magni non
+                                temporibus
+                                qui voluptas, doloribus iure necessitatibus, sit, minima distinctio
+                                recusandae sequi
+                                esse enim. Eaque harum non eos sed temporibus.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="accordeon__item">
+                        <button class="accordeon__title">Як довго надаємо послуги післяпродажного
+                            догляду?</button>
+                        <div class="panel">
+                            <p class="accordeon__descr">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor magni non
+                                temporibus qui voluptas, doloribus iure necessitatibus, sit, minima distinctio
+                                recusandae sequi esse enim. Eaque harum non eos sed temporibus.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="accordeon__item">
+                        <button class="accordeon__title">Чи можливе розбірка старого ландшафту перед
+                            початком нового проекту?
+                        </button>
+                        <div class="panel">
+                            <p class="accordeon__descr">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor magni non
+                                temporibus qui voluptas, doloribus iure necessitatibus, sit, minima
+                                distinctio recusandae sequi esse enim. Eaque harum non eos sed temporibus.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="accordeon__item">
+                        <button class="accordeon__title">Чи надаєте консультації та розробку дизайну
+                            онлайн?</button>
+                        <div class="panel">
+
+
+                            <p class="accordeon__descr">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor magni
+                                non temporibus qui voluptas, doloribus iure necessitatibus, sit, minima
+                                distinctio recusandae sequi esse enim. Eaque harum non eos sed
+                                temporibus.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
         </section>
-        <section class="contact-form">
+        <section class="contact-form section__mb">
             <div class="container">
+                <h2 class="title">Детальніше</h2>
                 <div class="contact-form__inner">
                     <div class="contact-form__content">
-                        <h2 class="title">Детальніше</h2>
                         <p class="contact-form__text">Хочу безкоштовний виїзд на об’єкт</p>
-                        <form action="#" class="form">
+                        <form action="" class="form" id="contact-form">
                             <p class="form__text">Укажіть свої контактні дані і наш менеджер перетелефонує Вам</p>
-                            <input type="text" class="form__input" placeholder="Ім’я">
-                            <input type="text" class="form__input" placeholder="Телефон">
-                            <input type="text" class="form__input" placeholder="Адреса">
+                            <div class="input_box"><input type="text" class="form__input" placeholder="Ім’я"></div>
+                            <div class="input_box"><input type="text" class="form__input" placeholder="Телефон"></div>
+                            <div class="input_box"><input type="text" class="form__input" placeholder="Адреса"></div>
                             <button class="form__btn" title="submit">Відправити</button>
                         </form>
-                        <a href="" class="form__link"> <span> Або відразу нам в телеграм </span> <img src="image/telegram.svg" alt="">
+                        <a href="" class="form__link"> <span> Або відразу нам в телеграм </span> <img
+                                src="image/telegram.svg" alt="">
                         </a>
                     </div>
                     <div class="contact-form__images">
-                        <img class="contact-form__images" src="image/form-1.png" alt="">
-                        <img class="contact-form__images" src="image/form-2.png" alt="">
+                        <img class="contact-form__images1" src="image/form-1.png" alt="">
+                        <img class="contact-form__images1" src="image/form-2.png" alt="">
                         <img class="contact-form__images-mod" src="image/form-3.png" alt="">
                     </div>
                 </div>
             </div>
         </section>
-        <section class="contacts">
+        <section class="reviews section__mb">
+            <div class="container">
+
+                <h2 class="title">Відгуки</h2>
+                <div class="reviews__slider swiper">
+
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide reviews__item">
+                            <p class="reviews__item-name">
+                                <img src="image/rev-1.jpg" alt="" class="reviews__item-photo">Юлія, м. Київ
+                            </p>
+                            <p class="reviews__item-text">Звернулася до цієї ландшафтної компанії за розробкою та
+                                втіленням
+                                дизайну. Задоволена роботою, дослухалися до всіх моїх побажаннь. Рекомендую!</p>
+                        </div>
+                        <div class="swiper-slide reviews__item">
+                            <p class="reviews__item-name">
+                                <img src="image/rev-2.jpg" alt="" class="reviews__item-photo">Олександра, м. Вінниця
+                            </p>
+                            <p class="reviews__item-text">Дякую за швидкість. Проект повністю відповідає моєму бажанню.
+                                Все
+                                зробили, прибрали та дали гарні поради, щодо догляду.</p>
+                        </div>
+                        <div class="swiper-slide reviews__item">
+                            <p class="reviews__item-name">
+                                <img src="image/rev-1.jpg" alt="" class="reviews__item-photo">Юлія, м. Київ
+                            </p>
+                            <p class="reviews__item-text">Звернулася до цієї ландшафтної компанії за розробкою та
+                                втіленням
+                                дизайну. Задоволена роботою, дослухалися до всіх моїх побажаннь. Рекомендую!</p>
+
+
+                        </div>
+                        <div class="swiper-slide reviews__item">
+                            <p class="reviews__item-name">
+                                <img src="image/rev-2.jpg" alt="" class="reviews__item-photo">Олександра, м. Вінниця
+                            </p>
+                            <p class="reviews__item-text">Дякую за швидкість. Проект повністю відповідає моєму бажанню.
+                                Все
+                                зробили, прибрали та дали гарні поради, щодо догляду.</p>
+                        </div>
+
+                    </div>
+                    <div class="reviews__item-arrow reviews__button-prev">
+                        <img src="image/errow_left.svg" alt="">
+                    </div>
+                    <div class="reviews__item-arrow reviews__button-next">
+                        <img src="image/errow_right.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contacts section__mb" id="contacts section__mb">
             <div class="container">
                 <h2 class="title">Контакти</h2>
                 <div class="contacts__inner">
                     <img src="image/contacts.png" alt="" class="contacts__img">
                     <div class="contacts__content">
-                        <p class="contacts__text">Зателефонуйте зараз та розпочніть трансформацію вашого саду у справжній рай на землі!</p>
+                        <p class="contacts__text">Зателефонуйте зараз та розпочніть трансформацію вашого саду у
+                            справжній рай на землі!</p>
                         <dl class="contacts__info">
                             <dt>Телефон</dt>
                             <dd><a href="tel:+380938422049">+380 938 422 049</a></dd>
@@ -338,31 +444,82 @@
                 </div>
             </div>
         </section>
+        <div class="decor">
+            <div class="decor__item1"><img src="image/decor/dec-1.svg" alt="" class="decor__img"></div>
+            <div class="decor__item2"><img src="image/decor/dec-2.svg" alt="" class="decor__img"></div>
+            <div class="decor__item3"><img src="image/decor/dec-3.svg" alt="" class="decor__img"></div>
+            <div class="decor__item4"><img src="image/decor/dec-4.svg" alt="" class="decor__img"></div>
+            <div class="decor__item5"><img src="image/decor/dec-5.svg" alt="" class="decor__img"></div>
+            <div class="decor__item6"><img src="image/decor/dec-6.svg" alt="" class="decor__img"></div>
+            <div class="decor__item7"><img src="image/decor/dec-7.svg" alt="" class="decor__img"></div>
+            <div class="decor__item8"><img src="image/decor/dec-8.svg" alt="" class="decor__img"></div>
+
+        </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script defer src="main.js"> </script>
     </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__iner">
+                <div class="foote__left">
+                    <nav class="footer__menu">
+                        <ul class="footer__menu-list">
+                            <li class="footer__menu-item">
+                                <a class="footer__menu-link" href="#about section__mb">Про нас
+                                </a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a class="footer__menu-link" href="#projects section__ms">Проекти
+                                </a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a class="footer__menu-link" href="#services section__ms">Послуги
+                                </a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a class="footer__menu-link" href="#prices section__mb">Ціна
+                                </a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a class="footer__menu-link" href="#contacts section__mb">Контакти
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <ul class="social__list">
+                        <li class="social__list-item">
+                            <a class="social__list-link" href="#">
+                                <img src="image/telegram_icon.svg" alt="">
+                            </a>
+                        </li>
+                        <li class="social__list-item">
+                            <a class="social__list-link" href="#">
+                                <img src="image/instagram.svg" alt="">
+                            </a>
+                        </li>
+                        <li class="social__list-item">
+                            <a class="social__list-link" href="#">
+                                <img src="image/facebook.svg" alt="">
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="footer__right">
+                    <a class="footer__logo" href="#">
+                        <img src="image/logo.svg" alt="логотип зелена палітра">
+                    </a>
+                    <p class="footer__tex">Реалізуйте Ваші зелені мрії з нами
+                    </p>
+
+                </div>
+            </div>
+        </div>
 
 
-
-
-
-
-
-    <script src="main.js"> </script>
+    </footer>
 </body>
 
 </html>
