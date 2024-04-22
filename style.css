@@ -437,13 +437,13 @@ body {
     right: 40px;
 }
 
-.accordeon__title.active,
-/* .accordeon__title:hover  */
+/* .accordeon__title.active,
+.accordeon__title:hover 
 {
     border: 2px solid #FFBA00;
     padding: 10px;
     padding-right: 70px;
-}
+} */
 
 .panel {
     display: none;
